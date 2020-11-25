@@ -632,11 +632,11 @@
 
                         obsData.payload.patient_id = item.patientid;
                         reading.reading_taken_time = (new Date(item.date)).getTime();
-                        alert(item.date);
+                        /*alert(item.date);
                         alert(item.date.length);
-                        alert(item.date.lastIndexOf('-'));
+                        alert(item.date.lastIndexOf('-'));*/
                         reading.timezone_gmt_offset = item.date.substring(item.date.lastIndexOf('-'), item.date.length);
-                        alert(reading.timezone_gmt_offset);
+                        //alert(reading.timezone_gmt_offset);
                         reading.measurements[1].value = item.sbp;
                         reading.measurements[2].value = item.dbp;
                         reading.measurements[0].value = item.hr;
