@@ -55,6 +55,7 @@
                                 <div class="form-row px-3">
                                   <label class="px-2" for="exampleFormControlSelect1">Select Environment</label>
                                   <select class="form-control" id="environment">
+                                      <option value="RSI-dev">https://RSI-Dev</option>
                                     <option value="dev">https://dev-smbp.amaaws.org</option>
                                     <option value="test">https://test-smbp.amaaws.org</option>
                                     <option value="stage">https://smbp-stage.verifi.health</option>
@@ -190,6 +191,11 @@
 
         /************** SET SOME ENV VARIABLES ******************/
         const envs = {
+             "RSI-dev" : {
+                "getTokenUrl" : "http://203.34.117.174:8081/smart-is/identity/generate-token",
+                "storeReadingsFhirUrl" : "http://203.34.117.174:8081/smart-device-connect/mmhg/v1/store/readings",
+                "storeReadingsAnDUrl" : "http://203.34.117.174:8081/smart-device-connect/ADDevice/v1/store/readings"
+            },
             "dev" : {
                 "getTokenUrl" : "https://dev-smbp.amaaws.org/smart-is/identity/generate-token",
                 "storeReadingsFhirUrl" : "https://dev-smbp.amaaws.org/smart-device-connect/mmhg/v1/store/readings",
